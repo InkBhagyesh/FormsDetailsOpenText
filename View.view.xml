@@ -1,0 +1,22 @@
+<mvc:View xmlns:core="sap.ui.core"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:l="sap.ui.layout"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          width="100%"
+          controllerName="com.winslow.FORMSCARD.Card">
+ 	<List
+		id="ProductList"
+		items="{myModel>/}" headerText="FORMS"
+		includeItemInSelection="true">
+		<CustomListItem>
+			<HBox>
+				<core:Icon size="2rem" src="sap-icon://pdf-attachment" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" />
+				<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" >
+					<Link text="{myModel>name}" target="{myModel>actions/1/url}" press="handlePress"/>
+					<Label text="Preview"/>
+				</VBox>
+			</HBox>
+		</CustomListItem>
+	</List>
+</mvc:View>
