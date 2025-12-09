@@ -1,0 +1,10 @@
+.requirementText {
+    text-decoration: none !important;
+    line-height: 1.6;
+}
+
+.requirementText:hover,
+.requirementText:focus {
+    text-decoration: none !important;
+    background: transparent !important;
+}

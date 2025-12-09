@@ -3,15 +3,19 @@
 	"sap.app": {
 		"id": "com.winslow.FORMSCARD",
 		"type": "card",
-		"title": "",
-		"subTitle": "",
+		"title": "Forms Card",
+		"subTitle": "Sewer Main Construction",
 		"applicationVersion": {
 			"version": "1.0.0"
 		}
 	},
 	"sap.ui": {
 		"technology": "UI5",
-        "deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"deviceTypes": {
+			"desktop": true,
+			"phone": true,
+			"tablet": true
+		},
 		"icons": {
 			"icon": "sap-icon://bus-public-transport"
 		}
@@ -29,6 +33,13 @@
 				"sap.m": {}
 			}
 		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
 		"config": {
 			"sample": {
 				"stretch": true,
@@ -40,17 +51,26 @@
 	},
 	"sap.card": {
 		"type": "Component",
-        "designtime": "dt/configuration",
+		"designtime": "dt/configuration",
 		"header": {
 			"icon": {
 				"src": "sap-icon://bus-public-transport"
 			},
 			"title": "Buy your bus ticket online",
 			"subTitle": "You’ll receive an email with a QR code. No need to print!",
-			"visible":false
+			"visible": false
+		},
+		"configuration": {
+			"destinations": {
+				"BMSPortal_API": {
+					"name": "BMSPortal_API",
+					"label": "BTP CAP Destination",
+					"defaultUrl": "https://winslow-mgmt-services-unit-trust-fsm-btp-dev-pt8gi5dj-w6c52d584.cfapps.ap10.hana.ondemand.com/v2/odata/v4/main"
+				}
+			}
 		}
 	},
-    "sap.platform.mobilecards": {
-        "compatible": true
-    }
+	"sap.platform.mobilecards": {
+		"compatible": true
+	}
 }
