@@ -15,7 +15,7 @@
                     src="sap-icon://pdf-attachment" 
                     class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" />
                 <VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" >
-				    <Link text="{myModel>name}" href="{myModel>url}" target="_blank" class="requirementText"/>
+				    <Link text="{myModel>name}" wrapping="true" href="{myModel>url}" target="_blank" class="requirementText"/>
                     <Label text="Preview"/> 
                 </VBox>
             </HBox>

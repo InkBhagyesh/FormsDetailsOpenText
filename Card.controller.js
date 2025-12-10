@@ -1,11 +1,7 @@
 sap.ui.define([
-	"sap/m/MessageToast",
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/json/JSONModel",
-	'sap/m/Dialog',
-	'sap/m/Image',
-	'sap/m/Button'
-], function (MessageToast, Controller, JSONModel, Dialog, Image, Button) {
+], function (Controller, JSONModel) {
 	"use strict";
 
 	return Controller.extend("com.winslow.FORMSCARD.Card", {
