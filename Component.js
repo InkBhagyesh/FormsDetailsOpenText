@@ -1,16 +1,21 @@
 sap.ui.define([
-	'sap/ui/core/UIComponent',
-	"sap/ui/model/odata/v2/ODataModel"
+    'sap/ui/core/UIComponent',
+    "sap/ui/model/odata/v2/ODataModel"
 ],
-	function(UIComponent,ODataModel) {
-	"use strict";
+    function (UIComponent, ODataModel) {
+        "use strict";
 
-	var Component = UIComponent.extend("com.winslow.FORMSCARD.Component", {
+        var Component = UIComponent.extend("com.winslow.FORMSCARD.Component", {
 
-		metadata : {
-			manifest: "json"
-		},
-		onCardReady: function (oCard) {
+            metadata: { manifest: "json" },
+
+            onInit: function () {
+                UIComponent.prototype.onInit.apply(this, arguments);
+                // Create a property to hold the initialization promise
+                this._oModelReadyPromise = null;
+            },
+
+            onCardReady: function (oCard) {
                 // const that = this;
                 // oCard.request({
                 //     "url": "{{destinations.BMSPortal_API}}/v2/odata/v4/main/CompanyCodeData"
@@ -55,8 +60,8 @@ sap.ui.define([
                     console.error("Destination Resolution Failed", sError);
                 });
             }
-	});
+        });
 
-	return Component;
+        return Component;
 
-});
+    });
