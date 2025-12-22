@@ -21,11 +21,8 @@ sap.ui.define([
             else if (mime === "Workpage URL") {
                 return "sap-icon://chain-link";
             }
-            else if (mime === "application/msword") {
+            else if (mime === "application/msword" || mime === "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {
                 return "sap-icon://document-text";
-            }
-            else if (mime === "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {
-                return "sap-icon://doc-attachment";
             }
             else if (mime === "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" || mime === "application/vnd.ms-excel") {
                 return "sap-icon://excel-attachment";
@@ -34,5 +31,23 @@ sap.ui.define([
                 return "sap-icon://document";
             }
         },
+        formatExpiryDate: function (sDate) {
+            if (!sDate) {
+                return "";
+            }
+
+            var oDate = new Date(sDate);
+            var sFormatted = oDate.toLocaleDateString("en-IN");
+
+            return "Expiry Date: " + sFormatted;
+        },
+        previewText: function (sDescription) {
+            if (sDescription && sDescription.trim()) {
+                return sDescription;
+            }
+            return "Preview";
+        }
+
+
     }
 });
