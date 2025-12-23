@@ -1,6 +1,7 @@
 .requirementText {
     text-decoration: none !important;
     line-height: 1.6;
+    font-weight: 600;
 }
 
 .requirementText:hover,
@@ -9,6 +10,3 @@
     background: transparent !important;
 }
 
-.textColor {
-    color: red !important;
-}

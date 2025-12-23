@@ -11,7 +11,7 @@
                 <VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" >
 				    <Link text="{myModel>name}" wrapping="true" href="{myModel>url}" target="_blank" class="requirementText"/>
                     <Label text="{path: 'myModel>description',formatter: '.Formatter.previewText'}"/>
-                    <Text text="{path: 'oProceduresModel>expirydate', formatter: '.Formatter.formatExpiryDate'}" class="sapUiTinyMarginTop textColor"/>
+                    <Text text="{path: 'oProceduresModel>expirydate', formatter: '.Formatter.formatExpiryDate'}" class="sapUiTinyMarginTop"/>
                 </VBox>
             </HBox>
         </CustomListItem>
